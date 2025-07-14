@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+        <title>To Do Application - By Kat</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <script type="text/javascript" scr="script.js"></script>
+
+        <div class="container">
+            <!--input field for adding tasks, list displaying tasks, buttons for adding and removing-->
+            <div class="todo-header">
+                <h2>To Do List</h2>
+                <img src="/To-Do-List/images/list-checks.png" height="30px"/>
+            </div>
+            <div calss="todo-body">
+                <input
+                    type="text"
+                    id="todoText"
+                    class="todo-input"
+                    placeholder="Add your task"
+                />
+                <img   
+                    src="/To-Do-List/images/plus-circle.png"
+                    alt="+"
+                    id="AddUpdateClick"
+                    onclick="CreateToDoItems();"
+                />
+            </div>
+            <h5 id="Alert"></h5>
+            <ul id="list-items" class="list-items"></ul>
+        </div>
+    </body>
+</html>
