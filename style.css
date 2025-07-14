@@ -1,13 +1,45 @@
 body {
-    font-family: 'Urbanist', sans-serif;
+    background-color: #09262e;
+
+    color: #9db1b8;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 500;
     font-style: normal;
 }
 
-h1 {
-    font-family: 'Texturina', serif;
+h1, h2 {
+    font-family: "Titan One", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
+}
+
+a {
+    color: #f1eae2;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: #f1eae2;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #9db1b8;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #03181b;
 }
