@@ -1,6 +1,5 @@
 body {
     background-color: #09262e;
-
     color: #9db1b8;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -23,36 +22,62 @@ h3 {
 }
 
 a {
-    color: #9db1b8;
+    background-image: linear-gradient(
+        to right,
+        #ff7ece,
+        #ff7ece 50%,
+        #f1eae2 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+a:before {
+    content: '';
+    background: #ff7ece;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #f1eae2;
+    background-position: 0;
 }
 
-li {
-    float: left;
-}
-
-li a {
-    color: #f1eae2;
-    display: block;
-    padding: 10px;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #9db1b8;
+a:hover::before {
+    width: 100%;
 }
 
 ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #03181b;
+}
+
+li {
+    float: left;
+    padding: 10px 20px 10px;
+    /*border-right: 1px solid #09262e; 
+    border-left: 1px solid #09262e;*/
+}
+
+li a {
+    display: block
 }
 
 .project {
@@ -66,4 +91,26 @@ ul {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+}
+
+.proimg {
+    background: #09262e;
+    opacity: .5;
+}
+
+.proimg img {
+    opacity: .5;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out; 
+}
+
+.proimg:hover img {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #03181b;
+    color: #f1eae2;
 }
