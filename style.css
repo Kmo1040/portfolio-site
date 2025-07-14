@@ -15,7 +15,18 @@ h1, h2 {
     font-style: normal;
 }
 
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
 a {
+    color: #9db1b8;
+}
+
+a:hover {
     color: #f1eae2;
 }
 
@@ -42,4 +53,17 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #03181b;
+}
+
+.project {
+    border: 1px solid #9db1b8;
+    margin: 5px;
+    padding: 10px;
+    flex: 0 0 200px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
