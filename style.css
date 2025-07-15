@@ -1,6 +1,5 @@
 body {
     background-color: #09262e;
-    color: #9db1b8;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -12,6 +11,7 @@ h1, h2 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: #9db1b8;
 }
 
 h3 {
@@ -19,6 +19,7 @@ h3 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: italic;
+    color: #9db1b8;
 }
 
 a {
@@ -67,13 +68,13 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #03181b;
+    border-radius: 5px; 
 }
 
 li {
     float: left;
     padding: 10px 20px 10px;
-    /*border-right: 1px solid #09262e; 
-    border-left: 1px solid #09262e;*/
+    
 }
 
 li a {
@@ -82,15 +83,18 @@ li a {
 
 .project {
     border: 1px solid #9db1b8;
+    border-radius: 5px; 
     margin: 5px;
     padding: 10px;
     flex: 0 0 200px;
+    color: #9db1b8;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    color: #9db1b8;
 }
 
 .proimg {
@@ -98,11 +102,14 @@ li a {
     width: 400px;
     height: 200px;
     overflow: hidden;
+    border-radius: 5px; 
+    color: #9db1b8;
 }
 
 .proimg img {
     width: 100%;
     height: 100%;
+    border-radius: 5px; 
     object-fit: cover;
     object-position: center top;
     opacity: .5;
@@ -112,6 +119,82 @@ li a {
 
 .proimg:hover img {
     opacity: 1;
+}
+
+input[type=text], input[type=email], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #f1eae2; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+  font-family: "Montserrat", sans-serif;
+}
+
+input[type=text]::placeholder, textarea::placeholder, input[type=email]::placeholder {
+    color: #09262e;
+    opacity: 0.7;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    border: 2px solid #ff7ece;
+    outline: none;
+}
+
+.submit-button {
+  min-width: 130px;
+  height: 40px;
+  color: #09262e;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease, color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #09262e;
+  overflow: hidden;
+  border: 2px solid #09262e;
+  color: #f1eae2;
+}
+
+.submit-button:hover {
+  color: #09262e;
+  border: 2px solid #ff7ece;
+}
+
+.submit-button:hover:after {
+  height: 100%;
+}
+
+.submit-button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #ff7ece;
+}
+
+.contact-form {
+  border-radius: 5px;
+  background-color: #9db1b8;
+  padding: 20px;
+  color: #03181b;
+}
+
+@media (max-width: 600px) {
+    .project, .proimg {
+        width: 100%;
+        height: auto;
+    }
 }
 
 footer {
