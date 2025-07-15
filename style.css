@@ -81,6 +81,10 @@ li a {
     display: block
 }
 
+.about {
+    color: #9db1b8;
+}
+
 .project {
     border: 1px solid #9db1b8;
     border-radius: 5px; 
@@ -200,6 +204,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 footer {
     text-align: center;
     padding: 5px;
-    background-color: #03181b;
-    color: #f1eae2;
+    background-color: #09262e;
+    color: #9db1b8;
+    opacity: 0.5;
 }
