@@ -95,13 +95,19 @@ li a {
 
 .proimg {
     background: #09262e;
-    opacity: .5;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
 }
 
 .proimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
     opacity: .5;
     -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out; 
+    transition: .3s ease-in-out;
 }
 
 .proimg:hover img {
