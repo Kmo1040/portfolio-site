@@ -1,0 +1,430 @@
+body {
+    background: url('/P-StudyDashboard/images/marko-blazevic-4ibyBpL6bBA-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e1dd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background: #1b263b;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 45px;
+    border-bottom: 2px solid rgb(137, 194, 217);
+    box-shadow: 0 5px 30px rgba(137, 194, 217, 0.4);
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #89c2d9;
+}
+
+a {
+    color: #ffb6b9;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(13, 27, 42, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/*GREETING AND DATE*/
+#greeting {
+    font-size: 30px;
+    font-weight: bold;
+    color: #89c2d9;
+    margin-bottom: 5px;
+}
+
+#date {
+    font-size: 16px;
+    color: #9db1b8;
+    font-style: italic;
+}
+
+#greeting, #date {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/*TO DO LIST*/
+#todo-app {    
+    background: #1b263b;
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#task-input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #89c2d9;
+    border-radius: 3px;
+    font-size: 13px;
+    background: #1b263b;
+    color: #f1eae2;
+    margin-right: 10px;
+}
+
+#task-input::placeholder {
+    color: #9db1b8;
+}
+
+#add-task {
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #89c2d9, #ffb6b9);
+    color: #0d1b2a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#add-task:hover {
+    background: linear-gradient(45deg, #ff9aa2, #89c2d9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#task-list li {
+    background: #415a77;
+    color: #e0e1dd;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list li input[type="checkbox"] {
+    appearance: none;
+    background-color: #0d1b2a;
+    border: 1px solid #ffb6b9;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#task-list li input[type="checkbox"]:checked {
+    background-color: #ffb6b9;
+    border-color: #ff9aa2;
+}
+
+#task-list li input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: #0d1b2a;
+    position: absolute;
+    top: -1px;
+    left: 2px;
+    font-size: 14px;
+}
+
+#task-list li .task-left {
+    display: flex;
+    align-items: center;
+}
+
+#task-list li .task-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#task-list li button {
+    background: #1b263b;
+    border: 1px solid #89c2d9;
+    color: #89c2d9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+#task-list li button:hover {
+    background: #89c2d9;
+    color: #0d1b2a;
+}
+
+#task-list li.priority-task {
+    border: 1px solid #e0e1dd;
+    background: #415a77;
+}
+
+.completed-task {
+    opacity: 0.5;
+}
+
+/*POMODORO*/
+#pomodoro {
+    background: #1b263b;
+    padding: 25px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#time-counter {
+    display: inline-block;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 10px;
+    color: #89c2d9;
+    background: #0d1b2a;
+    padding: 15px 40px;
+    border-radius: 8px;
+    border: 2px solid #89c2d9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+}
+
+#time-control-panel {
+    display: inline-block;
+    width: 30%;
+}
+
+#time-settings {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+#time-settings input { 
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #89c2d9;
+    border-radius: 3px;
+    font-size: 13px;
+    background: #1b263b;
+    color: #f1eae2;
+}
+
+#time-settings input::placeholder {
+    color: #9db1b8;
+}
+
+#time-settings button { 
+    width: 30%; 
+    padding: 10px 15px;
+    font-size: 14px;
+    background: #ffb6b9;
+    color: #0d1b2a;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#time-settings button:hover {
+    background: #ff9aa2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+#time-controls {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+#time-controls button {
+    width: 50%;
+    padding-bottom: 5px;
+    font-size: 20px;
+    background: #ffb6b9;
+    color: #0d1b2a;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#time-controls button:hover {
+    background: #ff9aa2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+#timer-notification {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffb6b9;
+    margin: 5px;
+    text-align: center;
+}
+
+
+/*CLASS LIST AND PROGRESS*/
+
+#classes {
+    background: #1b263b;
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#course-input-container {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.course-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-item-header h3 {
+    margin: 0;
+}
+
+#course-name, #course-progress {
+    flex: 1;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    background: #e0e1dd;
+    color: #0d1b2a;
+    font-size: 13px;
+}
+
+#course-progress {
+    max-width: 120px;
+}
+
+#add-course-btn {
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #89c2d9, #ffb6b9);
+    color: #0d1b2a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#add-course-btn:hover {
+    background: linear-gradient(45deg, #ff9aa2, #89c2d9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.course-item {
+    background: #1b263b;
+    padding: 10px 10px 15px 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 4px solid #89c2d9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.course-item button {
+    margin-left: 1px;
+    background: #1b263b;
+    border: 1px solid #89c2d9;
+    color: #89c2d9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.course-item button:hover {
+    background: #89c2d9;
+    color: #0d1b2a;
+}
+
+.progress-container {
+    background: #415a77;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    background: #89c2d9;
+    height: 20px;
+    text-align: center;
+    color: #0d1b2a;
+    font-weight: bold;
+}
+
+#add-course input {
+    padding: 10px;
+    border: 1px solid #89c2d9;
+    border-radius: 3px;
+    font-size: 13px;
+    background: #1b263b;
+    color: #f1eae2;
+    margin-right: 5px;
+}
+
+#add-course input::placeholder {
+    color: #9db1b8;
+}
+
+.completed-course {
+    opacity: 0.5;
+    border-left: 5px solid #415a77;
+}
+
+.completed-course h3::after {
+    content: "✓ Completed!";
+    color: #ffb6b9;
+    font-size: 0.9em;
+    margin-left: 10px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Study Dashboard</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="content-container">
+            <header>
+                <h1 id="greeting"></h1>
+                <p id="date"></p>
+            </header>
+
+            <main>
+                <!--TO DO LIST-->
+                <section id="todo">
+                    <h2>Today's Tasks</h2>
+                    <div id="todo-app">
+                        <div id="task-input-container">
+                            <input type="text" id="task-input" placeholder="Add a new task">
+                            <button id="add-task">
+                                🞥
+                            </button>
+                        </div>
+                        <ul id="task-list"></ul>
+                    </div>
+                </section>
+
+                <!--POMODORO-->
+                <section id="timer">
+                    <h2>Focus Timer</h2>
+                    <div id="pomodoro">
+                        <p id="time-counter">25:00</p>
+
+                        <div id="time-control-panel">
+                            <div id="time-settings">
+                                <input type="number" id="minutes-input" placeholder="Minutes" min="1" style="width:60px;">
+                                <button id="set-time">Set</button>
+                            </div>
+
+                            <div id="time-controls">
+                                <button id="start">
+                                    ⏵
+                                </button>
+                                <button id="pause">
+                                    ⏸
+                                </button>
+                                <button id="reset">
+                                    ⭮                
+                                </button>
+                            </div>
+                        
+                            <p id="timer-notification"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!--CLASS LIST AND PROGRESS-->
+                <section id="courses">
+                    <h2>Courses</h2>
+                    <div id="classes">
+                        <div id="add-course">
+                            <div id="course-input-container">
+                                <input type="text" id="course-name" placeholder="New Course Name">
+                                <input type="number" id="course-progress" placeholder="Progress %" min="0" max="100">
+                                <button id="add-course-btn">
+                                    🞥
+                                </button>
+                            </div>
+                        </div>
+                        <div id="course-list"></div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2025 Kat Moore | Study Dashboard</p>
+            </footer>
+
+            <script src="script.js"></script>
+        </div>
+    </body>
+</html>
