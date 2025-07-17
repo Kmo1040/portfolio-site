@@ -1,0 +1,188 @@
+body {
+    background: #0d1b2a;
+    color: #e0e1dd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%
+}
+
+h1 {
+    text-align: center;
+    color: #ffb6b9;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.map-legend-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/*MAP*/
+#map {
+    height: 600px;
+    width: 100%;
+    border: 4px solid #ffb6b9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.leaflet-tooltip.zip-tooltip {
+    background: #0d1b2a;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border: 1px solid #0d1b2a;
+}
+
+.leaflet-tooltip.zip-tooltip::before {
+    border-top-color: #0d1b2a;
+}
+
+/*LEGEND*/
+#legend {
+    position: relative;
+    font-size: 15px;
+    z-index: 1000;
+    background: #fafaf8; 
+    padding: 10px; 
+    border-radius: 8px; 
+    max-width: 600px;
+    color: #0d1b2a;
+    border: 4px solid #ffb6b9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+#legend-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.legend-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 5px;
+    border: 1px solid #000;
+}
+
+.legend-highlighted {
+    background: rgba(255, 77, 109, 0.6); 
+    border: 2px solid #ff4d6d; 
+}
+
+.legend-other {
+    background: none; 
+}
+
+/*ZIP CONTROLS*/
+#zip-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#zip-controls input {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+#zip-controls button {
+    padding: 5px 10px;
+    background: #ffb6b9;
+    color: #0d1b2a;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#zip-controls button:hover {
+    background: #ff9aa2;
+}
+
+/*HIGHLIGHTED LIST*/
+#highlighted-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 130px;
+}
+
+#highlighted-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#highlighted-list li {
+    font-size: 13px;
+}
+
+#zip-max-notice {
+    display: none;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#zip-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 200px;
+}
+
+#zip-list li {
+    font-size: 13px;
+    text-align: center;
+    background: #e0e1dd;
+    color: #0d1b2a;
+    border-radius: 3px;
+    padding: 2px 4px;
+}

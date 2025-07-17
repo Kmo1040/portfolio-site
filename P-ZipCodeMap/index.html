@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Missouri Zip Map</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/P-ZipCodeMap/leaflet/leaflet.css"/>
+        <link rel="stylesheet" href="/P-ZipCodeMap/style.css"/>
+        
+    </head>
+    <body>
+        <h1>Missouri Zip Code Map</h1>
+        <div class="map-container">
+            <div class="map-legend-flex">
+                <div id="map"></div>
+                <div id="legend">
+                    <div class="legend-flex">
+
+                        <div class="legend-items">
+                            <b>Legend</b>
+
+                            <div class="legend-item">
+                                <span class="legend-color legend-highlighted"></span>
+                                Highlighted Zip Codes
+                            </div>
+
+                            <div class="legend-item">
+                                <span class="legend-color legend-other"></span>
+                                Other Zip Codes
+                            </div>
+
+                        </div>
+
+                        <div id="zip-controls">
+                            <input type="text" id="zip-input" placeholder="Enter ZIP code">
+                            <button id="add-zip">Add ZIP</button>
+                            <button id="remove-zip">Remove ZIP</button>
+                            
+                            <div id="zip-max-notice">Reached max ZIPs!</div>
+                        </div>
+
+                        <div id="highlighted-list">
+                            <b>Current Highlighted ZIPs</b>
+                            <ul id="zip-list"></ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/P-ZipCodeMap/leaflet/leaflet.js"></script>
+        <script src="/P-ZipCodeMap/script.js"></script>
+    </body>
+</html>
