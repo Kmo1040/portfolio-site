@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1f2c, #252a40);
+    color: #fadbfe;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #a6fefc;
+    text-shadow: 0 0 10px #a183e4;
+    margin-bottom: 20px;
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(173, 130, 243, 0.3);
+    padding: 20px;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 800px;
+}
+
+input, button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    background: linear-gradient(45deg, #eda9f5, #a183e4);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #a6fefc, #eda9f5);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #fadbfe;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff1f7;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(250, 219, 254, 0.2);
+}
+
+tr:hover {
+    background: rgba(250, 219, 254, 0.05);
+}
+
+.autopay-true {
+    color: #a6fefc;
+    font-weight: bold;
+}
+
+.paid {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.5);
+}
