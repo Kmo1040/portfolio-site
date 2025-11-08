@@ -1,78 +1,101 @@
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1a1f2c, #252a40);
-    color: #fadbfe;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #202532, #333776);
+    color: #fab0d0;
+    text-align: center;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px;
+    background-image: url('images/cbe4b698855a26fb93ba5da081357e12.jpg');
 }
 
 h1 {
-    text-align: center;
-    color: #a6fefc;
-    text-shadow: 0 0 10px #a183e4;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    font-size: 2.2rem;
+    color: #333776;
+    text-shadow: 0 0 12px #a183e4;
 }
 
-.glass-box {
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(10px);
+h2 {
+    color: #a6fefc;
+    margin-bottom: 10px;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(250, 219, 254, 0.2);
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(173, 130, 243, 0.3);
+    box-shadow: 0 0 15px rgba(250, 219, 254, 0.4);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    margin-bottom: 25px;
-    width: 100%;
-    max-width: 800px;
+    margin-top: 20px;
 }
 
 input, button {
     border: none;
     border-radius: 8px;
-    padding: 10px;
+    padding: 8x;
     margin: 5px;
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fab0d0;
     outline: none;
+}
+
+::placeholder {
+    color: #fab0d0;
+    opacity: 1;
 }
 
 button {
     background: linear-gradient(45deg, #eda9f5, #a183e4);
-    color: #fff;
-    cursor: pointer;
+    color: #fff1f7;
     font-weight: bold;
-    transition: 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: linear-gradient(45deg, #a6fefc, #eda9f5);
+    background: linear-gradient(45deg, #fadbfe, #a6fefc);
+    box-shadow: 0 0 15px rgba(166, 254, 252, 0.7);
     transform: scale(1.05);
-    box-shadow: 0 0 10px #fadbfe;
 }
 
-table {
+#bill-table {
     width: 100%;
     border-collapse: collapse;
-    color: #fff1f7;
+    margin-top: 20px;
 }
 
-th, td {
+#bill-table th, #bill-table td {
     padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid rgba(250, 219, 254, 0.2);
-}
-
-tr:hover {
-    background: rgba(250, 219, 254, 0.05);
-}
-
-.autopay-true {
-    color: #a6fefc;
-    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .paid {
     text-decoration: line-through;
-    color: rgba(255, 255, 255, 0.5);
+    opacity: 0.6;
+}
+
+.due-soon {
+    box-shadow: 0 0 12px 2px rgba(255, 100, 150, 0.7);
+    border-radius: 8px;
+}
+
+.control {
+    margin-top: 15px;
+}
+
+.totals {
+    margin-top: 10px;
+    font-weight: bold;
 }

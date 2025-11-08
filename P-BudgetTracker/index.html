@@ -7,42 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="dashboard">
+    <div class="app-container">
         <h1>Monthly Budget Tracker</h1>
 
-        <div class="add-bill-form glass-box">
+        <div class="income-section glass-panel">
+            <h2>Income</h2>
+            <input type="number" id="income" placeholder="Monthly Income">
+            <button id="save-income">Save</button>
+            <div class="totals">
+                <p>Total Bills: $<span id="total-bills">0.00</span></p>
+                <p>Remaining: $<span id="remaining">0.00</span></p>
+            </div>
+        </div>
+
+        <div class="add-bill-section glass-panel">
+            <h2>Add Bills</h2>
             <input type="text" id="bill-name" placeholder="Bill Name">
             <input type="date" id="bill-date">
             <input type="number" id="bill-amount" placeholder="Amount">
+            <input type="text" id="bill-notes" placeholder="Notes (optional)">
             <label>
                 <input type="checkbox" id="bill-autopay"> Autopay
             </label>
             <button id="add-bill">Add Bill</button>
         </div>
 
-        <div class="summary glass-box">
-            <p><strong>Total:</strong> $<span id="total-amount">0.00</span></p>
-            <p><strong>Upcoming:</strong> <span id="due-soon-count"></span></p>
+        <div class="controls">
+            <label><input type="checkbox" id="toggle-paid">Show Paid Bills</label>
+            <button id="export-csv">Export CSV</button>
+            <button id="reset-month">New Month</button>
         </div>
 
-        <div class="bill-list glass-box">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Bill</th>
-                        <th>Due Date</th>
-                        <th>Amount</th>
-                        <th>Autopay</th>
-                        <th>Paid</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="bill-table-body">
-
-                </tbody>
-            </table>
-        </div>
-
+        <table id="bill-table" class="glass-panel">
+            <thead>
+                <tr>
+                    <th>Bill</th>
+                    <th>Due</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                    <th>Autopay</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="bill-list"></tbody>
+        </table>
     </div>
 
     <script src="script.js"></script>
